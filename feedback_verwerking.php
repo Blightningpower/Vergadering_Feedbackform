@@ -16,6 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // E-mailconfiguratie
     $ontvanger = "b.armanyous@student.avans.nl"; // Vervang door jouw e-mailadres
     $onderwerp = "Feedbackformulier Vergadering";
+    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
     // Bericht opstellen
     $bericht = "Feedbackformulier Vergadering:\n\n" .
