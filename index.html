@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedbackformulier Vergadering</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #0056b3;
+        }
+        form {
+            background-color: #fff;
+            padding: 35px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-top: 10px;
+            resize: vertical;
+        }
+        .options input {
+            margin-right: 10px;
+        }
+        button {
+            background-color: #0056b3;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #004494;
+        }
+    </style>
+</head>
+<body>
+    <h1>Feedbackformulier Vergadering</h1>
+    <form action="feedback_verwerking.php" method="post">
+        <!-- Vraag 1 -->
+        <div class="question">
+            <label>1. Wat vond je van de duur van de vergadering?</label>
+            <div class="options">
+                <input type="radio" name="duur" value="Te lang"> Te lang<br>
+                <input type="radio" name="duur" value="Precies goed"> Precies goed<br>
+                <input type="radio" name="duur" value="Te kort"> Te kort
+            </div>
+            <textarea name="toelichting_duur" rows="2" placeholder="Toelichting..."></textarea>
+        </div>
+
+        <!-- Vraag 2 -->
+        <div class="question">
+            <label>2. Hoe duidelijk was de agenda?</label>
+            <div class="options">
+                <input type="radio" name="agenda" value="Heel duidelijk"> Heel duidelijk<br>
+                <input type="radio" name="agenda" value="Redelijk"> Redelijk<br>
+                <input type="radio" name="agenda" value="Onduidelijk"> Onduidelijk
+            </div>
+            <textarea name="toelichting_agenda" rows="2" placeholder="Toelichting..."></textarea>
+        </div>
+
+        <!-- Vraag 3 -->
+        <div class="question">
+            <label>3. Hoe efficiënt verliep de vergadering?</label>
+            <div class="options">
+                <input type="radio" name="efficientie" value="Heel efficiënt"> Heel efficiënt<br>
+                <input type="radio" name="efficientie" value="Redelijk"> Redelijk<br>
+                <input type="radio" name="efficientie" value="Niet efficiënt"> Niet efficiënt
+            </div>
+            <textarea name="toelichting_efficientie" rows="2" placeholder="Toelichting..."></textarea>
+        </div>
+
+        <!-- Vraag 4 -->
+        <div class="question">
+            <label>4. Waren de besproken onderwerpen relevant?</label>
+            <div class="options">
+                <input type="radio" name="relevant" value="Ja"> Ja<br>
+                <input type="radio" name="relevant" value="Gedeeltelijk"> Gedeeltelijk<br>
+                <input type="radio" name="relevant" value="Nee"> Nee
+            </div>
+            <textarea name="toelichting_relevant" rows="2" placeholder="Toelichting..."></textarea>
+        </div>
+
+        <!-- Vraag 5 -->
+        <div class="question">
+            <label>5. Wat kan beter?</label>
+            <div class="options">
+                <input type="radio" name="verbetering" value="Kortere duur"> Kortere duur<br>
+                <input type="radio" name="verbetering" value="Duidelijkere agenda"> Duidelijkere agenda<br>
+                <input type="radio" name="verbetering" value="Betere communicatie"> Betere communicatie
+            </div>
+            <textarea name="toelichting_verbetering" rows="2" placeholder="Toelichting..."></textarea>
+        </div>
+
+        <button type="submit">Verzenden</button>
+    </form>
+</body>
+</html>
