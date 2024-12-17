@@ -1,6 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Haal formulierdata op
+    $naam = $_POST['naam'] ?? 'Onbekend';
     $duur = $_POST['duur'] ?? 'Geen antwoord';
     $toelichtingDuur = $_POST['toelichting_duur'] ?? 'Geen toelichting';
     $agenda = $_POST['agenda'] ?? 'Geen antwoord';
@@ -15,11 +16,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // E-mailconfiguratie
     $ontvanger = "b.armanyous@student.avans.nl"; // Vervang door jouw e-mailadres
     $onderwerp = "Feedbackformulier Vergadering";
-    $headers = "From: feedbackformulier@voorbeeld.nl\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
     // Bericht opstellen
     $bericht = "Feedbackformulier Vergadering:\n\n" .
+               "Je hebt nieuwe feedback ontvangen van: $naam\n\n" .
                "1. Duur van de vergadering: $duur\nToelichting: $toelichtingDuur\n\n" .
                "2. Duidelijkheid van de agenda: $agenda\nToelichting: $toelichtingAgenda\n\n" .
                "3. Efficiëntie van de vergadering: $efficientie\nToelichting: $toelichtingEfficientie\n\n" .
