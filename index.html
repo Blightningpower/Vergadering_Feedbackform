@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,10 +13,12 @@
             background-color: #f9f9f9;
             color: #333;
         }
+
         h1 {
             text-align: center;
             color: #0056b3;
         }
+
         form {
             background-color: #fff;
             padding: 35px;
@@ -24,14 +27,17 @@
             max-width: 600px;
             margin: 0 auto;
         }
+
         label {
             font-weight: bold;
             display: block;
             margin-bottom: 5px;
         }
+
         .question {
             margin-bottom: 20px;
         }
+
         textarea {
             width: 100%;
             padding: 10px;
@@ -40,9 +46,11 @@
             margin-top: 10px;
             resize: vertical;
         }
+
         .options input {
             margin-right: 10px;
         }
+
         button {
             background-color: #0056b3;
             color: #fff;
@@ -52,20 +60,27 @@
             cursor: pointer;
             border-radius: 5px;
         }
+
         button:hover {
             background-color: #004494;
         }
     </style>
 </head>
+
 <body>
     <h1>Feedbackformulier Vergadering</h1>
     <form action="feedback_verwerking.php" method="post">
+
+        <!-- Vergadergegevens -->
+        <h2>Voorbereiding assessment</h2>
+        <b>05-01-2025</b>
+<br><br>
         <!-- Naam veld -->
         <div class="question">
             <label>Jouw naam:</label>
             <input type="text" name="naam" placeholder="Vul je naam in" required>
         </div>
-        
+
         <!-- Vraag 1 -->
         <div class="question">
             <label>1. Wat vond je van de duur van de vergadering?</label>
@@ -124,4 +139,5 @@
         <button type="submit">Verzenden</button>
     </form>
 </body>
+
 </html>
